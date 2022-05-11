@@ -6,7 +6,7 @@ from scipy.io.wavfile import write
 spf = wave.open('helloworld.wav', 'r')
 
 signal = spf.readframes(-1)
-signal = np.fromstring(signal, 'Int16')
+signal = np.fromstring(signal, 'uint8')
 print("numpy signal:", signal.shape)
 plt.plot(signal)
 plt.title("Hello world without echo")
