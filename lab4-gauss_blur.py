@@ -23,14 +23,15 @@ out = convolve2d(bw, W)
 plt.imshow(out, cmap = 'gray')
 plt.show()
 
-out.shape()
+print(out.shape)
 
 out = convolve2d(bw, W, mode = 'same')
 plt.imshow(out, cmap = 'gray')
 plt.show()
 
-out.shape()
-bw.shape()
+print(out.shape)
+
+print(bw.shape)
 
 out3 = np.zeros(img.shape)
 for i in range(3):
