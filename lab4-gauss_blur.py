@@ -33,7 +33,7 @@ print(out.shape)
 
 print(bw.shape)
 
-out3 = np.zeros(img.shape)
+out3 = np.zeros(img.shape, 'int')
 for i in range(3):
     out3[:,:,i] = convolve2d(img[:,:,i], W, mode='same')
 plt.imshow(out3)
