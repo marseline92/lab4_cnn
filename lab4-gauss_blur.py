@@ -12,8 +12,8 @@ plt.imshow(bw, cmap = 'gray')
 plt.show()
 
 W = np.zeros((20, 20))
-for i in np.xrange(20):
-    for j in np.xrange(20):
+for i in range(20):
+    for j in range(20):
         dist = (i - 9.5) ** 2 + (j - 9.5) ** 2
         W [i, j] = np.exp (-dist / 50)
 plt.imshow(W, cmap = 'gray')
@@ -33,7 +33,7 @@ out.shape()
 bw.shape()
 
 out3 = np.zeros(img.shape)
-for i in np.xrange(3):
+for i in range(3):
     out3[:,:,i] = convolve2d(img[:,:,i], W, mode='same')
 plt.imshow(out3)
 plt.show()
